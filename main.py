@@ -1,7 +1,7 @@
 # Importa los módulos necesarios
 import sys
 from roles import RolesPreset
-from chat_service import ChatService
+from chat_services import ChatService
 from config import settings # Importa los ajustes de configuración
 
 # Define la función para elegir un rol al inicio
@@ -45,7 +45,7 @@ def main():
     # Bucle infinito que mantiene el chat activo
     while True:
         try:
-            user_input = input("🥰Tú: ").strip()
+            user_input = input("🎓Tú: ").strip()
             print("")
         except (KeyboardInterrupt, EOFError):
             print("\nSaliendo del chat. ¡Hasta luego!")

@@ -38,6 +38,13 @@ class ChatService:
         self.memory.add_model_message(response_text)
         # Devuelve la respuesta generada por la IA.
         return response_text
+        #definiendo el set role que faltaba
+            # Método para cambiar el rol del chatbot en caliente
+    def set_role(self, role: RolesPreset):
+        """Cambia el rol actual del chatbot y reinicia la memoria."""
+        self.role = role
+        self.reset()  # Opcional: reinicia la conversación al cambiar de rol
+
 
     # Método para reiniciar la conversación.
     def reset(self):
